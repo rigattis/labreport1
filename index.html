@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Map</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js" defer></script>
+</head>
+<body>
+    <h3>Lab Report 1</h3>
+    <h4>Sara Rigatti</h4>
+    <p>Each marker represents a water sample. The color corresponds to the nitrate concentration. Many of the values were between 0 and 10 umol/L of nitrates, so there is a separate color scale for those values. Scroll and zoom on the map to see each sample's name and nitrate concentration in umol/L</p>
+    <div id="map"></div>
+    <div id="legend">
+      <h4>Value Legend, values in umol/L</h4>
+      <div class="legend-section">
+          <div id="gradient-bar-1" class="gradient-bar1"></div>
+          <div class="legend-labels">
+              <span>0</span>
+              <span>5</span>
+              <span>10</span>
+          </div>
+      </div>
+      <div class="legend-section">
+          <div id="gradient-bar-2" class="gradient-bar2"></div>
+          <div class="legend-labels">
+              <span>10</span>
+              <span>275</span>
+              <span>600</span>
+          </div>
+      </div>
+      <div class="legend-section">
+        <div class="black-box"></div>
+        <span class="label">N>600. Hover over the marker to see the value</span>
+      </div>
+  </div>
+  
+</body>
+<script>
+  (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+    key: "AIzaSyDu6mL4XWYFKbOhNXGT_fY2oD7dNxAb0FM",
+    v: "weekly",
+    // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+    // Add other bootstrap parameters as needed, using camel case.
+  });
+</script>
+</html>
